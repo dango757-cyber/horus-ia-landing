@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserva tu llamada — HORUS IA</title>
+<meta name="description" content="Reserva 15 minutos con un especialista de HORUS IA. Sin cuestionarios previos ni esperas de días.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<style>
+:root {
+  --gold:       #C9A84C;
+  --gold-light: #E5C97A;
+  --blue:       #3B8FE8;
+  --blue-bright:#5BA8FF;
+  --black:      #000000;
+  --black-1:    #050505;
+  --black-2:    #0A0A0A;
+  --white:      #FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;
+  min-height:100vh;
+  display:flex;flex-direction:column;
+}
+
+/* top bar */
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 32px;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  background:rgba(0,0,0,0.6);
+}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo img{width:32px;height:32px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(59,143,232,0.5));}
+.logo-text{font-size:15px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--white);}
+.logo-text .gold{color:var(--gold-light);}
+.back-link{
+  color:rgba(255,255,255,0.45);text-decoration:none;
+  font-size:12px;letter-spacing:0.08em;text-transform:uppercase;
+  transition:color 0.3s;
+}
+.back-link:hover{color:var(--white);}
+
+/* hero */
+main{flex:1;display:flex;flex-direction:column;align-items:center;padding:56px 24px 40px;}
+.eyebrow{
+  font-size:11px;letter-spacing:0.35em;text-transform:uppercase;
+  color:var(--blue-bright);margin-bottom:18px;text-align:center;
+}
+h1{
+  font-size:clamp(30px,4.5vw,48px);
+  font-weight:800;line-height:1.1;letter-spacing:-0.02em;
+  text-align:center;margin-bottom:16px;
+}
+h1 .gold{color:var(--gold-light);}
+.sub{
+  font-size:15px;color:rgba(255,255,255,0.4);
+  max-width:520px;text-align:center;line-height:1.7;margin-bottom:40px;
+}
+
+.booking-card{
+  width:100%;max-width:920px;
+  background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);
+  border-radius:12px;padding:16px;
+}
+#cal-booking-inline{width:100%;min-height:700px;}
+
+.meta{display:flex;align-items:center;gap:8px;margin-top:28px;font-size:12px;color:rgba(255,255,255,0.3);}
+.meta .dot{width:6px;height:6px;border-radius:50%;background:var(--blue-bright);box-shadow:0 0 8px var(--blue-bright);flex-shrink:0;}
+
+footer{
+  text-align:center;padding:24px;font-size:12px;color:rgba(255,255,255,0.25);
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+footer a{color:rgba(255,255,255,0.35);text-decoration:none;}
+footer a:hover{color:var(--gold-light);}
+
+@media(max-width:640px){
+  header{padding:16px 20px;}
+  main{padding:40px 16px 32px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="horus-eye-logo.png" alt="HORUS IA Logo">
+    <span class="logo-text">HORUS <span class="gold">IA</span></span>
+  </a>
+  <a href="index.html" class="back-link">← Volver al inicio</a>
+</header>
+
+<main>
+  <p class="eyebrow">Agenda una llamada</p>
+  <h1>Reserva 15 minutos<br>con <span class="gold">un especialista</span></h1>
+  <p class="sub">Sin cuestionarios previos ni esperas de días. Eliges el hueco que te venga bien y hablamos por videollamada.</p>
+
+  <div class="booking-card">
+    <div id="cal-booking-inline"></div>
+  </div>
+  <div class="meta"><span class="dot"></span> Confirmación instantánea por email al reservar</div>
+</main>
+
+<footer>
+  © 2026 HORUS IA · <a href="index.html#contacto">¿Prefieres escribir? Contáctanos</a>
+</footer>
+
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  Cal("init", "15min", { origin: "https://cal.com" });
+
+  Cal.ns["15min"]("inline", {
+    elementOrSelector: "#cal-booking-inline",
+    config: { layout: "month_view" },
+    calLink: "daniel-gomez-ire516/15min",
+  });
+
+  Cal.ns["15min"]("ui", {
+    theme: "dark",
+    styles: { branding: { brandColor: "#C9A84C" } },
+    hideEventTypeDetails: false,
+    layout: "month_view",
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso Legal — HORUS IA</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<style>
+:root{
+  --gold:#C9A84C;--gold-light:#E5C97A;--gold-pale:#F5E4A8;
+  --blue:#3B8FE8;--blue-bright:#5BA8FF;--blue-dim:rgba(59,143,232,0.15);
+  --black:#000000;--black-1:#050505;--black-2:#0A0A0A;--black-3:#111111;
+  --white:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:#080808;}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold),var(--blue));border-radius:2px;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);background:rgba(0,0,0,0.55);border-bottom:1px solid rgba(255,255,255,0.04);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(59,143,232,0.5));}
+.nav-logo-text{font-size:15px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--white);}
+.nav-logo-text .gold{color:var(--gold-light);}
+.nav-back{color:rgba(255,255,255,0.5);text-decoration:none;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.12);padding:9px 18px;border-radius:2px;transition:all 0.3s;}
+.nav-back:hover{border-color:rgba(201,168,76,0.5);color:var(--gold-light);}
+
+.legal{max-width:760px;margin:0 auto;padding:150px 24px 100px;}
+.legal-eyebrow{font-size:12px;letter-spacing:0.25em;text-transform:uppercase;color:var(--blue-bright);margin-bottom:14px;}
+.legal h1{font-size:clamp(32px,5vw,52px);font-weight:800;margin-bottom:12px;letter-spacing:-0.01em;}
+.legal-updated{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:40px;}
+
+.legal-notice{border-left:3px solid var(--gold);background:rgba(201,168,76,0.07);padding:18px 22px;border-radius:4px;font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-bottom:48px;}
+.legal-notice strong{color:var(--gold-light);}
+
+.legal-toc{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:22px 26px;margin-bottom:56px;}
+.legal-toc p{font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;}
+.legal-toc ol{padding-left:18px;display:grid;gap:8px;}
+.legal-toc a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:14px;}
+.legal-toc a:hover{color:var(--gold-light);}
+
+article section{margin-bottom:44px;}
+article h2{font-size:20px;font-weight:700;color:var(--white);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.08);}
+article h2 span{color:var(--gold-light);margin-right:10px;}
+article h3{font-size:15px;font-weight:700;color:var(--blue-bright);margin:20px 0 10px;}
+article p{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.65);margin-bottom:14px;}
+article ul,article ol{padding-left:22px;margin-bottom:14px;}
+article li{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.65);margin-bottom:6px;}
+article a{color:var(--blue-bright);text-decoration:underline;text-underline-offset:2px;}
+article strong{color:rgba(255,255,255,0.9);}
+.tbd{color:var(--gold-light);border-bottom:1px dashed rgba(229,201,122,0.5);padding:0 2px;white-space:nowrap;}
+
+footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.04);background:#000;}
+.footer-logo{display:flex;align-items:center;gap:10px;}
+.footer-logo img{width:28px;height:28px;object-fit:contain;opacity:0.6;filter:drop-shadow(0 0 4px rgba(59,143,232,0.3));}
+.footer-logo span{font-size:12px;font-weight:700;letter-spacing:0.2em;color:rgba(255,255,255,0.25);}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.18);}
+.footer-links{display:flex;gap:20px;list-style:none;}
+.footer-links a{font-size:11px;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.3s;letter-spacing:0.05em;}
+.footer-links a:hover{color:var(--gold);}
+
+@media(max-width:640px){
+  nav{padding:16px 20px;}
+  footer{flex-direction:column;gap:20px;text-align:center;padding:32px 20px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="preview-v2.html" class="nav-logo">
+    <img src="horus-eye-logo.png" alt="HORUS IA Logo">
+    <span class="nav-logo-text">HORUS <span class="gold">IA</span></span>
+  </a>
+  <a href="preview-v2.html" class="nav-back">← Volver al inicio</a>
+</nav>
+
+<main class="legal">
+  <div class="legal-header">
+    <p class="legal-eyebrow">Información Legal</p>
+    <h1>Aviso Legal</h1>
+    <p class="legal-updated">Última actualización: 5 de julio de 2026</p>
+  </div>
+
+  <div class="legal-notice">
+    <strong>Nota para el titular del sitio:</strong> este documento es una plantilla ajustada a la LSSI-CE y debe completarse con los datos identificativos reales antes de publicar el sitio. Los campos marcados como <span class="tbd">[dato pendiente]</span> son obligatorios por ley (art. 10 LSSI-CE) y no pueden quedar en blanco ni con datos ficticios. Se recomienda validación por un asesor legal antes de la publicación definitiva.
+  </div>
+
+  <nav class="legal-toc">
+    <p>Índice</p>
+    <ol>
+      <li><a href="#identificacion">1. Datos identificativos del titular</a></li>
+      <li><a href="#objeto">2. Objeto y ámbito de aplicación</a></li>
+      <li><a href="#condiciones">3. Condiciones de acceso y uso</a></li>
+      <li><a href="#propiedad">4. Propiedad intelectual e industrial</a></li>
+      <li><a href="#responsabilidad">5. Exclusión de garantías y responsabilidad</a></li>
+      <li><a href="#enlaces">6. Enlaces (links)</a></li>
+      <li><a href="#proteccion-datos">7. Protección de datos</a></li>
+      <li><a href="#legislacion">8. Legislación aplicable y jurisdicción</a></li>
+      <li><a href="#modificaciones">9. Modificaciones</a></li>
+    </ol>
+  </nav>
+
+  <article>
+    <section id="identificacion">
+      <h2><span>1.</span>Datos identificativos del titular</h2>
+      <p>En cumplimiento del deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los siguientes datos: el presente sitio web (en adelante, el "Sitio Web"), accesible desde danielo.click, es titularidad de:</p>
+      <ul>
+        <li><strong>Titular:</strong> <span class="tbd">[Razón social o nombre completo del titular]</span></li>
+        <li><strong>NIF/CIF:</strong> <span class="tbd">[NIF/CIF]</span></li>
+        <li><strong>Domicilio social:</strong> Calle Comendador, 2 — <span class="tbd">[código postal]</span> Azuqueca de Henares, Guadalajara, España</li>
+        <li><strong>Datos registrales:</strong> <span class="tbd">[Registro Mercantil, tomo, folio, hoja — si aplica]</span></li>
+        <li><strong>Email de contacto:</strong> horus-ia@danielo.click</li>
+        <li><strong>Teléfono:</strong> +34 661 679 002</li>
+      </ul>
+    </section>
+
+    <section id="objeto">
+      <h2><span>2.</span>Objeto y ámbito de aplicación</h2>
+      <p>El presente Aviso Legal regula el uso del Sitio Web, cuya finalidad es informar sobre los servicios de HORUS IA —una plataforma SaaS de automatización de atención al cliente mediante inteligencia artificial conectada a WhatsApp— y permitir a los usuarios solicitar información comercial o una demostración del producto.</p>
+      <p>El acceso al Sitio Web es gratuito y no exige registro previo, salvo para la cumplimentación de los formularios de contacto habilitados a tal efecto.</p>
+    </section>
+
+    <section id="condiciones">
+      <h2><span>3.</span>Condiciones de acceso y uso</h2>
+      <p>El acceso y uso del Sitio Web atribuye la condición de usuario e implica la aceptación plena de todas las condiciones incluidas en este Aviso Legal. El usuario se compromete a:</p>
+      <ul>
+        <li>Hacer un uso adecuado y lícito del Sitio Web conforme a la legislación aplicable, la buena fe y el orden público.</li>
+        <li>No emplear el Sitio Web con fines fraudulentos, lesivos o que puedan dañar, inutilizar o sobrecargar el servicio.</li>
+        <li>No introducir o difundir virus informáticos ni cualquier otro sistema susceptible de causar daños en los sistemas del titular o de terceros.</li>
+        <li>Facilitar información veraz en los formularios de contacto y solicitud de demo, sin suplantar la identidad de terceros.</li>
+      </ul>
+    </section>
+
+    <section id="propiedad">
+      <h2><span>4.</span>Propiedad intelectual e industrial</h2>
+      <p>Todos los contenidos del Sitio Web —incluyendo, sin carácter exhaustivo, textos, gráficos, logotipos, iconos, imágenes, animaciones, vídeos, marca "HORUS IA" y código fuente— son propiedad de <span class="tbd">[Titular]</span> o de terceros que han autorizado su uso, y están protegidos por la normativa española y comunitaria de propiedad intelectual e industrial.</p>
+      <p>Queda prohibida su reproducción, distribución, comunicación pública, transformación o cualquier otra forma de explotación, total o parcial, sin la autorización previa y por escrito del titular.</p>
+    </section>
+
+    <section id="responsabilidad">
+      <h2><span>5.</span>Exclusión de garantías y responsabilidad</h2>
+      <p>El titular no garantiza la disponibilidad, continuidad ni infalibilidad del funcionamiento del Sitio Web y, en consecuencia, excluye, en la medida permitida por la legislación vigente, cualquier responsabilidad por los daños y perjuicios de toda naturaleza derivados de:</p>
+      <ul>
+        <li>La falta de disponibilidad, mantenimiento o funcionamiento del Sitio Web o de sus servicios.</li>
+        <li>La existencia de virus, programas maliciosos o cualquier otro elemento lesivo introducido por terceros ajenos al titular.</li>
+        <li>El uso indebido o ilícito del Sitio Web por parte del usuario.</li>
+        <li>Errores u omisiones en los contenidos, sin perjuicio del compromiso de subsanarlos tan pronto se tenga conocimiento de ellos.</li>
+      </ul>
+    </section>
+
+    <section id="enlaces">
+      <h2><span>6.</span>Enlaces (links)</h2>
+      <p>En caso de que el Sitio Web incluya enlaces a sitios de terceros, el titular no ejerce control alguno sobre dichos sitios y contenidos, sin que en ningún caso deba entenderse que existe relación alguna, ni que el titular recomienda, promueve, garantiza o supervisa los servicios y contenidos allí ofrecidos.</p>
+    </section>
+
+    <section id="proteccion-datos">
+      <h2><span>7.</span>Protección de datos</h2>
+      <p>El tratamiento de los datos personales facilitados a través del Sitio Web se rige por lo establecido en la <a href="politica-privacidad.html">Política de Privacidad</a>. El uso de cookies se detalla en la <a href="politica-cookies.html">Política de Cookies</a>.</p>
+    </section>
+
+    <section id="legislacion">
+      <h2><span>8.</span>Legislación aplicable y jurisdicción</h2>
+      <p>Las presentes condiciones se rigen por la legislación española. Para la resolución de cualquier controversia derivada del acceso o uso del Sitio Web, las partes se someterán a los Juzgados y Tribunales de Guadalajara, salvo que la normativa de consumidores y usuarios establezca un fuero distinto de carácter imperativo.</p>
+    </section>
+
+    <section id="modificaciones">
+      <h2><span>9.</span>Modificaciones</h2>
+      <p>El titular se reserva el derecho a modificar el presente Aviso Legal para adaptarlo a novedades legislativas, jurisprudenciales o de práctica del sector. Las modificaciones serán efectivas desde su publicación en el Sitio Web.</p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <div class="footer-logo">
+    <img src="horus-eye-logo.png" alt="HORUS IA">
+    <span>HORUS IA</span>
+  </div>
+  <p class="footer-copy">© 2026 HORUS IA. Todos los derechos reservados.</p>
+  <ul class="footer-links">
+    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+    <li><a href="politica-privacidad.html">Privacidad</a></li>
+    <li><a href="politica-cookies.html">Cookies</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

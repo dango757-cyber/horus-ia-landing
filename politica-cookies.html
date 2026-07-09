@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Cookies — HORUS IA</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<style>
+:root{
+  --gold:#C9A84C;--gold-light:#E5C97A;--gold-pale:#F5E4A8;
+  --blue:#3B8FE8;--blue-bright:#5BA8FF;--blue-dim:rgba(59,143,232,0.15);
+  --black:#000000;--black-1:#050505;--black-2:#0A0A0A;--black-3:#111111;
+  --white:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:#080808;}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold),var(--blue));border-radius:2px;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);background:rgba(0,0,0,0.55);border-bottom:1px solid rgba(255,255,255,0.04);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(59,143,232,0.5));}
+.nav-logo-text{font-size:15px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--white);}
+.nav-logo-text .gold{color:var(--gold-light);}
+.nav-back{color:rgba(255,255,255,0.5);text-decoration:none;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.12);padding:9px 18px;border-radius:2px;transition:all 0.3s;}
+.nav-back:hover{border-color:rgba(201,168,76,0.5);color:var(--gold-light);}
+
+.legal{max-width:760px;margin:0 auto;padding:150px 24px 100px;}
+.legal-eyebrow{font-size:12px;letter-spacing:0.25em;text-transform:uppercase;color:var(--blue-bright);margin-bottom:14px;}
+.legal h1{font-size:clamp(32px,5vw,52px);font-weight:800;margin-bottom:12px;letter-spacing:-0.01em;}
+.legal-updated{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:40px;}
+
+.legal-notice{border-left:3px solid var(--gold);background:rgba(201,168,76,0.07);padding:18px 22px;border-radius:4px;font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-bottom:48px;}
+.legal-notice strong{color:var(--gold-light);}
+
+.legal-toc{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:22px 26px;margin-bottom:56px;}
+.legal-toc p{font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;}
+.legal-toc ol{padding-left:18px;display:grid;gap:8px;}
+.legal-toc a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:14px;}
+.legal-toc a:hover{color:var(--gold-light);}
+
+article section{margin-bottom:44px;}
+article h2{font-size:20px;font-weight:700;color:var(--white);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.08);}
+article h2 span{color:var(--gold-light);margin-right:10px;}
+article h3{font-size:15px;font-weight:700;color:var(--blue-bright);margin:20px 0 10px;}
+article p{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.65);margin-bottom:14px;}
+article ul,article ol{padding-left:22px;margin-bottom:14px;}
+article li{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.65);margin-bottom:6px;}
+article a{color:var(--blue-bright);text-decoration:underline;text-underline-offset:2px;}
+article strong{color:rgba(255,255,255,0.9);}
+.tbd{color:var(--gold-light);border-bottom:1px dashed rgba(229,201,122,0.5);padding:0 2px;white-space:nowrap;}
+
+.legal-table-wrap{overflow-x:auto;margin:18px 0 28px;}
+table.legal-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px;}
+table.legal-table th,table.legal-table td{border:1px solid rgba(255,255,255,0.1);padding:10px 12px;text-align:left;color:rgba(255,255,255,0.65);vertical-align:top;}
+table.legal-table th{background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.85);font-weight:600;}
+
+.status-pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(34,197,94,0.15);color:#4ADE80;}
+
+footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.04);background:#000;}
+.footer-logo{display:flex;align-items:center;gap:10px;}
+.footer-logo img{width:28px;height:28px;object-fit:contain;opacity:0.6;filter:drop-shadow(0 0 4px rgba(59,143,232,0.3));}
+.footer-logo span{font-size:12px;font-weight:700;letter-spacing:0.2em;color:rgba(255,255,255,0.25);}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.18);}
+.footer-links{display:flex;gap:20px;list-style:none;}
+.footer-links a{font-size:11px;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.3s;letter-spacing:0.05em;}
+.footer-links a:hover{color:var(--gold);}
+
+@media(max-width:640px){
+  nav{padding:16px 20px;}
+  footer{flex-direction:column;gap:20px;text-align:center;padding:32px 20px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="preview-v2.html" class="nav-logo">
+    <img src="horus-eye-logo.png" alt="HORUS IA Logo">
+    <span class="nav-logo-text">HORUS <span class="gold">IA</span></span>
+  </a>
+  <a href="preview-v2.html" class="nav-back">← Volver al inicio</a>
+</nav>
+
+<main class="legal">
+  <div class="legal-header">
+    <p class="legal-eyebrow">Información Legal</p>
+    <h1>Política de Cookies</h1>
+    <p class="legal-updated">Última actualización: 5 de julio de 2026</p>
+  </div>
+
+  <div class="legal-notice">
+    <strong>Nota para el titular del sitio:</strong> este documento refleja el uso <em>real y actual</em> de cookies del Sitio Web (art. 22.2 LSSI-CE). Ahora mismo el sitio no instala cookies de análisis ni publicidad. <strong>Importante:</strong> el día que se añada Google Analytics, Meta Pixel u otra herramienta de medición/marketing, hay que (1) actualizar la tabla del punto 3 y (2) implementar un banner de consentimiento previo que bloquee esas cookies hasta que el usuario acepte — no basta con este documento por sí solo.
+  </div>
+
+  <nav class="legal-toc">
+    <p>Índice</p>
+    <ol>
+      <li><a href="#que-son">1. Qué son las cookies</a></li>
+      <li><a href="#actuales">2. Cookies utilizadas actualmente en este sitio</a></li>
+      <li><a href="#tipos">3. Tipos de cookies (clasificación de referencia)</a></li>
+      <li><a href="#consentimiento">4. Base legal y consentimiento</a></li>
+      <li><a href="#gestion">5. Cómo gestionar o eliminar las cookies</a></li>
+      <li><a href="#cambios">6. Cambios en esta política</a></li>
+    </ol>
+  </nav>
+
+  <article>
+    <section id="que-son">
+      <h2><span>1.</span>Qué son las cookies</h2>
+      <p>Las cookies son pequeños archivos de texto que un sitio web instala en el navegador o dispositivo del usuario, permitiendo guardar y recuperar información sobre la navegación. Bajo esta misma política se incluyen tecnologías similares (localStorage, sessionStorage, píxeles) cuando cumplan una función equivalente.</p>
+    </section>
+
+    <section id="actuales">
+      <h2><span>2.</span>Cookies utilizadas actualmente en este sitio <span class="status-pill">Sin cookies no esenciales</span></h2>
+      <p>A fecha de esta actualización, el Sitio Web <strong>no instala cookies de análisis, personalización ni publicidad</strong>. El sitio funciona con HTML, CSS y JavaScript de animación (GSAP) cargado desde el CDN público <em>cdnjs.cloudflare.com</em>; esa carga no instala cookies en el navegador, aunque implica una solicitud técnica directa a los servidores de Cloudflare (ver <a href="politica-privacidad.html#destinatarios">Política de Privacidad</a>).</p>
+      <p>El vídeo de la cabecera y el formulario de contacto se sirven directamente desde este Sitio Web, sin reproductores ni formularios embebidos de terceros que instalen cookies propias.</p>
+    </section>
+
+    <section id="tipos">
+      <h2><span>3.</span>Tipos de cookies (clasificación de referencia)</h2>
+      <p>Esta tabla se deja preparada como plantilla para cuando el Sitio Web incorpore nuevas herramientas. Debe reflejar en todo momento la realidad de lo instalado:</p>
+      <div class="legal-table-wrap">
+        <table class="legal-table">
+          <tr><th>Tipo</th><th>Finalidad</th><th>¿Requiere consentimiento previo?</th><th>Ejemplos si se añaden</th></tr>
+          <tr><td>Técnicas / necesarias</td><td>Permiten la navegación básica y funciones esenciales del sitio</td><td>No</td><td>Cookie de preferencia de idioma, cookie de sesión del formulario</td></tr>
+          <tr><td>Analíticas</td><td>Medir visitas y comportamiento agregado para mejorar el sitio</td><td>Sí</td><td><span class="tbd">[Google Analytics — no instalado]</span></td></tr>
+          <tr><td>Personalización</td><td>Recordar preferencias del usuario (idioma, región)</td><td>Sí, salvo elegidas activamente por el usuario</td><td><span class="tbd">[No instalado]</span></td></tr>
+          <tr><td>Publicidad / marketing</td><td>Mostrar anuncios relevantes o medir campañas</td><td>Sí</td><td><span class="tbd">[Meta Pixel, Google Ads — no instalado]</span></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="consentimiento">
+      <h2><span>4.</span>Base legal y consentimiento</h2>
+      <p>El artículo 22.2 de la LSSI-CE exige el consentimiento informado y previo del usuario para el uso de cookies no exceptuadas (es decir, todas salvo las estrictamente técnicas o necesarias). Mientras el Sitio Web no utilice cookies no esenciales, no se requiere un banner de consentimiento. En el momento en que se incorpore cualquier cookie analítica, de personalización o publicitaria, deberá implementarse un mecanismo de consentimiento previo (banner o similar) que permita aceptar, rechazar y configurar cookies de forma granular, conforme a la guía de la AEPD sobre el uso de cookies.</p>
+    </section>
+
+    <section id="gestion">
+      <h2><span>5.</span>Cómo gestionar o eliminar las cookies</h2>
+      <p>Aunque este Sitio Web no instala cookies no esenciales, el usuario conserva en todo momento el control sobre las cookies mediante la configuración de su propio navegador, donde puede bloquear, eliminar o ser avisado de la instalación de cookies con carácter general (no solo para este sitio). Esta opción se encuentra habitualmente en el menú de "Configuración" o "Privacidad y seguridad" de Chrome, Firefox, Safari, Edge y el resto de navegadores.</p>
+    </section>
+
+    <section id="cambios">
+      <h2><span>6.</span>Cambios en esta política</h2>
+      <p>Esta Política de Cookies se revisará y actualizará cada vez que se incorpore una nueva tecnología de seguimiento al Sitio Web, y periódicamente para reflejar cambios normativos.</p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <div class="footer-logo">
+    <img src="horus-eye-logo.png" alt="HORUS IA">
+    <span>HORUS IA</span>
+  </div>
+  <p class="footer-copy">© 2026 HORUS IA. Todos los derechos reservados.</p>
+  <ul class="footer-links">
+    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+    <li><a href="politica-privacidad.html">Privacidad</a></li>
+    <li><a href="politica-cookies.html">Cookies</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
