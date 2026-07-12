@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asistente de WhatsApp Business con IA para Negocios Locales | HORUS IA</title>
+<meta name="description" content="Asistente de WhatsApp Business que atiende consultas, muestra el catálogo actualizado y procesa pedidos automáticamente, 24 horas al día.">
+<link rel="canonical" href="https://danielo.click/negocios-locales.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Asistente de WhatsApp Business con inteligencia artificial para negocios locales",
+  "name": "HORUS IA para Negocios Locales",
+  "description": "Asistente de WhatsApp Business que atiende consultas, muestra el catálogo actualizado y procesa pedidos automáticamente, 24 horas al día.",
+  "provider": {
+    "@type": "Organization",
+    "name": "HORUS IA",
+    "url": "https://danielo.click/",
+    "email": "horus-ia@danielo.click",
+    "telephone": "+34661679002"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "España"
+  },
+  "url": "https://danielo.click/negocios-locales.html"
+}
+</script>
+<style>
+:root {
+  --gold:       #C9A84C;
+  --gold-light: #E5C97A;
+  --blue:       #3B8FE8;
+  --blue-bright:#5BA8FF;
+  --black:      #000000;
+  --white:      #FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--black);color:var(--white);
+  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;
+  min-height:100vh;display:flex;flex-direction:column;
+}
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 32px;border-bottom:1px solid rgba(255,255,255,0.06);
+  background:rgba(0,0,0,0.6);
+}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo img{width:32px;height:32px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(59,143,232,0.5));}
+.logo-text{font-size:15px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--white);}
+.logo-text .gold{color:var(--gold-light);}
+.back-link{color:rgba(255,255,255,0.45);text-decoration:none;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.3s;}
+.back-link:hover{color:var(--white);}
+
+main{flex:1;}
+.hero-wrap{max-width:720px;margin:0 auto;padding:72px 24px 8px;text-align:center;}
+.eyebrow{font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--blue-bright);margin-bottom:18px;}
+h1{font-size:clamp(30px,4.5vw,46px);font-weight:800;line-height:1.15;letter-spacing:-0.02em;margin-bottom:18px;text-wrap:balance;}
+h1 .gold{color:var(--gold-light);}
+.sub{font-size:16px;color:rgba(255,255,255,0.5);max-width:560px;margin:0 auto;line-height:1.7;}
+
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:980px;margin:48px auto 0;padding:0 24px;}
+.col-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:24px;}
+.col-label{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;display:block;font-weight:700;}
+.col-label.problem{color:#E88A6B;}
+.col-label.solution{color:var(--gold-light);}
+.col-label.result{color:var(--blue-bright);}
+.col-card p{color:rgba(255,255,255,0.55);font-size:14.5px;line-height:1.7;}
+
+.client-note{max-width:720px;margin:36px auto 0;padding:18px 22px;border-left:3px solid var(--gold);background:rgba(201,168,76,0.06);border-radius:4px;font-size:14.5px;color:rgba(255,255,255,0.7);line-height:1.6;}
+.client-note strong{color:var(--gold-light);}
+
+h2.section-h{max-width:720px;margin:64px auto 24px;padding:0 24px;font-size:22px;font-weight:800;text-align:center;}
+h2.section-h .gold{color:var(--gold-light);}
+
+.features{max-width:720px;margin:0 auto 8px;padding:0 24px;display:flex;flex-direction:column;gap:16px;}
+.feature-item{display:flex;gap:14px;align-items:flex-start;}
+.feature-dot{width:6px;height:6px;border-radius:50%;background:var(--blue-bright);margin-top:8px;flex-shrink:0;box-shadow:0 0 8px var(--blue-bright);}
+.feature-item p{color:rgba(255,255,255,0.6);font-size:14.5px;line-height:1.65;}
+.feature-item strong{color:var(--white);}
+
+.cta-card{max-width:680px;margin:64px auto 56px;padding:36px 32px;text-align:center;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:12px;}
+.cta-card h2{font-size:22px;margin-bottom:10px;}
+.cta-card p{color:rgba(255,255,255,0.45);font-size:14px;margin-bottom:24px;}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--black);padding:13px 32px;border-radius:2px;text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;transition:background 0.3s;}
+.cta-btn:hover{background:var(--gold-light);}
+.cta-secondary{margin-top:16px;font-size:12.5px;color:rgba(255,255,255,0.35);}
+.cta-secondary a{color:rgba(255,255,255,0.55);}
+
+.sector-links{max-width:980px;margin:0 auto;padding:0 24px 48px;text-align:center;}
+.sector-links p{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.3);margin-bottom:14px;}
+.sector-links ul{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;list-style:none;}
+.sector-links a{font-size:12.5px;color:rgba(255,255,255,0.55);text-decoration:none;border:1px solid rgba(255,255,255,0.12);padding:8px 16px;border-radius:100px;transition:all 0.3s;}
+.sector-links a:hover{color:var(--black);background:var(--gold-light);border-color:var(--gold-light);}
+
+footer{text-align:center;padding:28px 24px;font-size:11px;color:rgba(255,255,255,0.25);border-top:1px solid rgba(255,255,255,0.05);}
+footer a{color:rgba(255,255,255,0.35);text-decoration:none;}
+footer a:hover{color:var(--gold-light);}
+.footer-links{list-style:none;display:flex;justify-content:center;gap:18px;margin-top:10px;flex-wrap:wrap;}
+.footer-links a{font-size:11px;}
+
+@media(max-width:760px){
+  .cols{grid-template-columns:1fr;}
+  header{padding:16px 20px;}
+  .hero-wrap{padding:48px 20px 8px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="horus-eye-logo.png" alt="HORUS IA Logo">
+    <span class="logo-text">HORUS <span class="gold">IA</span></span>
+  </a>
+  <a href="index.html" class="back-link">← Volver al inicio</a>
+</header>
+
+<main>
+  <div class="hero-wrap">
+    <p class="eyebrow">HORUS IA para negocios locales</p>
+    <h1>Tu negocio, abierto<br><span class="gold">24 horas en WhatsApp</span></h1>
+    <p class="sub">Consultas, catálogo y pedidos atendidos por IA en el canal que ya usan tus clientes, incluso fuera de tu horario de cierre.</p>
+  </div>
+
+  <div class="cols">
+    <div class="col-card">
+      <span class="col-label problem">Problema</span>
+      <p>Consultas de clientes sin respuesta en horario de cierre, catálogo desactualizado y gestión de pedidos manual.</p>
+    </div>
+    <div class="col-card">
+      <span class="col-label solution">HORUS IA</span>
+      <p>Un asistente de WhatsApp Business que atiende consultas, muestra el catálogo actualizado y procesa pedidos automáticamente.</p>
+    </div>
+    <div class="col-card">
+      <span class="col-label result">Resultado</span>
+      <p>Negocio abierto digitalmente las 24 horas, con atención personalizada y sin coste de personal adicional.</p>
+    </div>
+  </div>
+
+  <div class="client-note">Es el sistema que ya usa <strong>El Más Delicioso</strong> para atender pedidos y consultas de clientes sin depender de que alguien conteste el WhatsApp a mano.</div>
+
+
+  <h2 class="section-h">Qué incluye para <span class="gold">tu negocio</span></h2>
+  <div class="features">
+    <div class="feature-item"><span class="feature-dot"></span><p><strong>HORUS CHAT</strong> — Atiende consultas de catálogo, precios y disponibilidad por WhatsApp Business en segundos.</p></div>
+    <div class="feature-item"><span class="feature-dot"></span><p><strong>HORUS AGENT</strong> — Procesa pedidos y los deriva a tu flujo habitual, sin que se te escape ninguno.</p></div>
+    <div class="feature-item"><span class="feature-dot"></span><p><strong>HORUS INTELLIGENCE</strong> — Ve qué preguntan más tus clientes para ajustar catálogo y horarios.</p></div>
+    <div class="feature-item"><span class="feature-dot"></span><p><strong>HORUS DEPLOY</strong> — Puesta en marcha guiada, sin que tengas que tocar tecnología nueva tú mismo.</p></div>
+  </div>
+
+  <div class="cta-card">
+    <h2>Habla con un especialista</h2>
+    <p>15 minutos, sin cuestionarios previos. Vemos si HORUS IA encaja con un negocio local como el tuyo.</p>
+    <a href="agenda.html" class="cta-btn">Reservar llamada</a>
+    <p class="cta-secondary">O escribe directamente a <a href="mailto:horus-ia@danielo.click">horus-ia@danielo.click</a></p>
+  </div>
+
+  <div class="sector-links">
+    <p>Otros sectores</p>
+    <ul>
+      <li><a href="administradores-de-fincas.html">Administradores de fincas</a></li>
+      <li><a href="hoteles-alojamientos.html">Hoteles y alojamientos</a></li>
+      <li><a href="empresas-seguridad.html">Empresas de seguridad</a></li>
+      <li><a href="centros-caninos.html">Centros caninos</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  © 2026 HORUS IA · Calle Comendador, 2, Azuqueca de Henares, Guadalajara
+  <ul class="footer-links">
+    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+    <li><a href="politica-privacidad.html">Privacidad</a></li>
+    <li><a href="politica-cookies.html">Cookies</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
