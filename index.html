@@ -1239,20 +1239,20 @@ footer{
 
       <div class="caso-item reveal">
         <div class="caso-sector">
-          <div class="caso-icon">🐾</div>
-          <div class="caso-name">Centros<br>Caninos</div>
+          <div class="caso-icon">🦺</div>
+          <div class="caso-name">Equipamiento<br>Canino</div>
         </div>
         <div class="caso-col problem">
           <span class="caso-col-label label-problem">Problema</span>
-          <p>Agenda de citas por WhatsApp manual, recordatorios de vacunas no automatizados y seguimiento irregular de cada animal.</p>
+          <p>Consultas de producto y pedidos personalizados por WhatsApp sin respuesta fuera de horario, y seguimiento de envíos manual.</p>
         </div>
         <div class="caso-col solution">
           <span class="caso-col-label label-solution">HORUS IA</span>
-          <p>Agente que gestiona citas, envía recordatorios automáticos de vacunas y mantiene ficha actualizada de cada mascota.</p>
+          <p>Agente que responde catálogo y tallas al instante, gestiona pedidos personalizados y avisa del estado del envío.</p>
         </div>
         <div class="caso-col result">
           <span class="caso-col-label label-result">Resultado</span>
-          <p>Agenda siempre llena, cero olvidos de seguimiento y dueños que confían en el servicio por su proactividad.</p>
+          <p>Ventas atendidas 24/7 sin ampliar equipo y clientes que vuelven a comprar en el momento justo.</p>
           <a href="centros-caninos.html" class="caso-link">Ver caso completo →</a>
         </div>
       </div>
@@ -1475,10 +1475,11 @@ footer{
       </div>
 
       <div class="reveal">
-        <form class="contact-form" action="https://formsubmit.co/horus-ia@danielo.click" method="POST" onsubmit="handleSubmit(event)">
+        <form class="contact-form" action="https://formsubmit.co/horus-ia@danielo.click" method="POST">
           <input type="hidden" name="_subject" value="Nueva solicitud de demo — HORUS IA">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://danielo.click/#contacto">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://danielo.click/gracias.html">
           <div class="form-row">
             <div class="form-group">
               <label>Nombre</label>
@@ -1506,7 +1507,7 @@ footer{
               <option>Administración de Fincas</option>
               <option>Hotel / Alojamiento</option>
               <option>Seguridad Privada</option>
-              <option>Centro Canino / Veterinaria</option>
+              <option>Equipamiento Canino</option>
               <option>Comercio Local</option>
               <option>Otro</option>
             </select>
@@ -1516,7 +1517,6 @@ footer{
             <textarea rows="4" name="mensaje" placeholder="Describe el proceso o punto de dolor que quieres resolver con IA..."></textarea>
           </div>
           <button type="submit" class="form-submit">Solicitar Demo Gratuita →</button>
-          <p class="form-status" style="font-size:13px;margin-top:12px;min-height:18px;color:rgba(255,255,255,0.4);"></p>
         </form>
       </div>
     </div>
@@ -1554,7 +1554,7 @@ footer{
     <li><a href="administradores-de-fincas.html">Fincas</a></li>
     <li><a href="hoteles-alojamientos.html">Hoteles</a></li>
     <li><a href="empresas-seguridad.html">Seguridad</a></li>
-    <li><a href="centros-caninos.html">Centros caninos</a></li>
+    <li><a href="centros-caninos.html">Equipamiento canino</a></li>
     <li><a href="negocios-locales.html">Negocios locales</a></li>
     <li><a href="aviso-legal.html">Aviso Legal</a></li>
     <li><a href="politica-privacidad.html">Privacidad</a></li>
@@ -1918,41 +1918,6 @@ gsap.to('.hero-overlay', {
 
   requestAnimationFrame(draw);
 })();
-
-/* ── 8. FORM HANDLER ── */
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('.form-submit');
-  const status = form.querySelector('.form-status');
-  const originalLabel = btn.textContent;
-  btn.disabled = true;
-  btn.textContent = 'Enviando…';
-  if (status) status.textContent = '';
-
-  const ajaxAction = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
-
-  fetch(ajaxAction, {
-    method: 'POST',
-    headers: { 'Accept': 'application/json' },
-    body: new FormData(form)
-  })
-  .then(res => {
-    if (!res.ok) throw new Error('request failed');
-    btn.textContent = '✓ Solicitud recibida — Te contactamos pronto';
-    btn.style.background = '#22C55E';
-    btn.style.color = '#fff';
-    form.reset();
-  })
-  .catch(() => {
-    btn.disabled = false;
-    btn.textContent = originalLabel;
-    if (status) {
-      status.style.color = '#F87171';
-      status.textContent = 'No se pudo enviar. Escríbenos directamente a horus-ia@danielo.click.';
-    }
-  });
-}
 
 /* ── 9. SMOOTH ANCHORS ── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
