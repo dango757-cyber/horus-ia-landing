@@ -309,7 +309,8 @@ h2 em { color: var(--blue-soft); font-size: 1.1em; line-height: 1; }
   text-shadow: 0 1px 14px rgba(3, 7, 13, .9), 0 0 2px rgba(3, 7, 13, .7);
 }
 .hero-foot { position: relative; display: flex; justify-content: center; padding-block: 24px 32px; }
-.video-toggle { position: absolute; left: 0; bottom: 32px; }
+/* Right side: the chat widget button sits bottom-left. */
+.video-toggle { position: absolute; right: 0; bottom: 32px; }
 .video-toggle svg { stroke-width: 1.8; }
 .video-toggle .icon-pause, .video-toggle[data-playing="true"] .icon-play { display: none; }
 .video-toggle[data-playing="true"] .icon-pause { display: block; }

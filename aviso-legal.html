@@ -7,79 +7,23 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<style>
-:root{
-  --gold:#C9A84C;--gold-light:#E5C97A;--gold-pale:#F5E4A8;
-  --blue:#3B8FE8;--blue-bright:#5BA8FF;--blue-dim:rgba(59,143,232,0.15);
-  --black:#000000;--black-1:#050505;--black-2:#0A0A0A;--black-3:#111111;
-  --white:#FFFFFF;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--black);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;overflow-x:hidden;}
-::-webkit-scrollbar{width:3px;}
-::-webkit-scrollbar-track{background:#080808;}
-::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold),var(--blue));border-radius:2px;}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);background:rgba(0,0,0,0.55);border-bottom:1px solid rgba(255,255,255,0.04);}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.nav-logo img{width:32px;height:32px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(59,143,232,0.5));}
-.nav-logo-text{font-size:15px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--white);}
-.nav-logo-text .gold{color:var(--gold-light);}
-.nav-back{color:rgba(255,255,255,0.5);text-decoration:none;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.12);padding:9px 18px;border-radius:2px;transition:all 0.3s;}
-.nav-back:hover{border-color:rgba(201,168,76,0.5);color:var(--gold-light);}
-
-.legal{max-width:760px;margin:0 auto;padding:150px 24px 100px;}
-.legal-eyebrow{font-size:12px;letter-spacing:0.25em;text-transform:uppercase;color:var(--blue-bright);margin-bottom:14px;}
-.legal h1{font-size:clamp(32px,5vw,52px);font-weight:800;margin-bottom:12px;letter-spacing:-0.01em;}
-.legal-updated{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:40px;}
-
-.legal-notice{border-left:3px solid var(--gold);background:rgba(201,168,76,0.07);padding:18px 22px;border-radius:4px;font-size:14px;line-height:1.7;color:rgba(255,255,255,0.75);margin-bottom:48px;}
-.legal-notice strong{color:var(--gold-light);}
-
-.legal-toc{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:22px 26px;margin-bottom:56px;}
-.legal-toc p{font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;}
-.legal-toc ol{padding-left:18px;display:grid;gap:8px;}
-.legal-toc a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:14px;}
-.legal-toc a:hover{color:var(--gold-light);}
-
-article section{margin-bottom:44px;}
-article h2{font-size:20px;font-weight:700;color:var(--white);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.08);}
-article h2 span{color:var(--gold-light);margin-right:10px;}
-article h3{font-size:15px;font-weight:700;color:var(--blue-bright);margin:20px 0 10px;}
-article p{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.65);margin-bottom:14px;}
-article ul,article ol{padding-left:22px;margin-bottom:14px;}
-article li{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.65);margin-bottom:6px;}
-article a{color:var(--blue-bright);text-decoration:underline;text-underline-offset:2px;}
-article strong{color:rgba(255,255,255,0.9);}
-.tbd{color:var(--gold-light);border-bottom:1px dashed rgba(229,201,122,0.5);padding:0 2px;white-space:nowrap;}
-
-footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.04);background:#000;}
-.footer-logo{display:flex;align-items:center;gap:10px;}
-.footer-logo img{width:28px;height:28px;object-fit:contain;opacity:0.6;filter:drop-shadow(0 0 4px rgba(59,143,232,0.3));}
-.footer-logo span{font-size:12px;font-weight:700;letter-spacing:0.2em;color:rgba(255,255,255,0.25);}
-.footer-copy{font-size:11px;color:rgba(255,255,255,0.18);}
-.footer-links{display:flex;gap:20px;list-style:none;}
-.footer-links a{font-size:11px;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.3s;letter-spacing:0.05em;}
-.footer-links a:hover{color:var(--gold);}
-
-@media(max-width:640px){
-  nav{padding:16px 20px;}
-  footer{flex-direction:column;gap:20px;text-align:center;padding:32px 20px;}
-}
-</style>
+<meta name="theme-color" content="#03070d">
+<link rel="stylesheet" href="agenda.css">
+<link rel="stylesheet" href="typography.css">
+<link rel="stylesheet" href="pages.css">
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="nav-logo">
-    <img src="horus-eye-logo.png" alt="HORUS IA Logo">
-    <span class="nav-logo-text">HORUS <span class="gold">IA</span></span>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="HORUS IA, volver al inicio">
+    <img src="assets/horus-eye-logo-192.png" width="44" height="35" alt="">
+    <span>HORUS <b>IA</b></span>
   </a>
-  <a href="index.html" class="nav-back">← Volver al inicio</a>
-</nav>
+  <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Volver al inicio</a>
+</header>
 
-<main class="legal">
+<main class="legal" id="contenido">
   <div class="legal-header">
     <p class="legal-eyebrow">Información Legal</p>
     <h1>Aviso Legal</h1>
@@ -171,18 +115,7 @@ footer{padding:36px 48px;display:flex;align-items:center;justify-content:space-b
   </article>
 </main>
 
-<footer>
-  <div class="footer-logo">
-    <img src="horus-eye-logo.png" alt="HORUS IA">
-    <span>HORUS IA</span>
-  </div>
-  <p class="footer-copy">© 2026 HORUS IA. Todos los derechos reservados.</p>
-  <ul class="footer-links">
-    <li><a href="aviso-legal.html">Aviso Legal</a></li>
-    <li><a href="politica-privacidad.html">Privacidad</a></li>
-    <li><a href="politica-cookies.html">Cookies</a></li>
-  </ul>
-</footer>
+<footer><p>© 2026 HORUS IA. Todos los derechos reservados.</p><nav class="footer-links" aria-label="Información legal"><a href="aviso-legal.html">Aviso legal</a><a href="politica-privacidad.html">Privacidad</a><a href="politica-cookies.html">Cookies</a></nav></footer>
 
 </body>
 </html>
