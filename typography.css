@@ -1,0 +1,34 @@
+/* Inter and Instrument Serif (SIL Open Font License), served locally. Licenses: assets/fonts/*-OFL.txt. */
+@font-face {
+  font-family: "Horus Inter";
+  src: url("assets/fonts/inter-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Horus Instrument Serif";
+  src: url("assets/fonts/instrumentserif-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Horus Instrument Serif";
+  src: url("assets/fonts/instrumentserif-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+:root {
+  --font-display: "Horus Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --font-body: "Horus Inter", Arial, sans-serif;
+  --font-heading: "Horus Inter", Arial, sans-serif;
+}
+body {
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+}
+h1, h2, h3, h4, .brand {
+  font-family: var(--font-heading);
+}
