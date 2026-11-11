@@ -73,6 +73,10 @@
       showFallback('No se ha podido mostrar la disponibilidad. Prueba de nuevo o abre el calendario con el enlace de abajo.');
     }
   });
+  calendar('on', {
+    action: 'bookingSuccessfulV2',
+    callback: () => { if (window.umami) window.umami.track('reserva-completada'); }
+  });
   calendar('inline', {
     elementOrSelector: '#cal-booking-inline',
     config: { layout: 'month_view', theme: 'dark' },

@@ -34,6 +34,10 @@ main { padding: 58px 24px 54px; background: radial-gradient(ellipse 650px 400px 
 .call-details { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; padding: 0; margin: 25px 0 38px; gap: 10px 28px; color: #cbdbec; font-size: 12px; }
 .call-details li { display: flex; align-items: center; gap: 8px; }
 .call-details span { color: var(--blue-bright); }
+.call-host { display: inline-flex; align-items: center; gap: 12px; margin: -12px 0 36px; padding: 5px 18px 5px 5px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: 13px; line-height: 1.4; text-align: left; }
+.call-host img { width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; object-fit: cover; }
+.call-host strong { color: var(--text); font-weight: 600; }
+.call-host span { text-wrap: balance; }
 .booking-section { max-width: 1080px; margin: 0 auto; }
 .booking-heading { margin: 0 0 18px; text-align: center; }
 h2 { margin: 0; font-family: var(--font-heading, var(--font-body, Inter, Arial, sans-serif)); font-weight: 500; font-size: 16px; line-height: 1.5; letter-spacing: -.015em; }
@@ -75,6 +79,7 @@ footer a:hover { color: var(--blue-bright); }
   .intro-description { padding-inline: 9px; font-size: 13px; margin-top: 20px; line-height: 1.8; }
   .call-details { margin-block: 22px 33px; gap: 10px 15px; font-size: 10px; }
   .call-details li { gap: 5px; }
+  .call-host { margin: -10px 0 30px; font-size: 12px; }
   h2 { font-size: 14px; padding-inline: 15px; }
   .booking-card { padding: 5px; border-radius: 14px; }
   #cal-booking-inline { min-height: 700px; }

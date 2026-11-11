@@ -23,6 +23,23 @@
   <link rel="stylesheet" href="typography.css">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <script src="analytics.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "HORUS IA",
+    "url": "https://danielo.click/",
+    "logo": "https://danielo.click/assets/horus-eye-logo-192.png",
+    "image": "https://danielo.click/assets/horus-eye-poster.jpg",
+    "email": "horus-ia@danielo.click",
+    "telephone": "+34661679002",
+    "address": { "@type": "PostalAddress", "streetAddress": "Calle Comendador, 2", "addressLocality": "Azuqueca de Henares", "addressRegion": "Guadalajara", "addressCountry": "ES" },
+    "areaServed": { "@type": "Country", "name": "España" },
+    "founder": { "@type": "Person", "name": "Daniel Gómez" },
+    "sameAs": ["https://www.instagram.com/horus__ia/"]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -31,16 +48,16 @@
     <nav class="nav glass" aria-label="Navegación principal">
       <a class="brand" href="#inicio" aria-label="HORUS IA, inicio"><img src="assets/horus-eye-logo-192.png" width="44" height="35" alt=""><span>HORUS <b>IA</b></span></a>
       <div class="nav-links">
-        <a href="#problemas">¿Te pasa esto?</a><a href="#solucion">Cómo te ayudamos</a><a href="#preguntas">Preguntas</a>
+        <a href="#problemas">¿Te pasa esto?</a><a href="#solucion">Cómo te ayudamos</a><a href="#pruebalo">Pruébalo</a><a href="#preguntas">Preguntas</a>
       </div>
       <div class="nav-actions">
         <a class="nav-text" href="#contacto">Escríbenos</a>
-        <a class="pill glass nav-cta" href="agenda.html">Agendar una llamada</a>
+        <a class="pill glass nav-cta" href="agenda.html" data-umami-event="agendar-llamada" data-umami-event-origen="menu">Agendar una llamada</a>
         <button class="menu-toggle glass" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú"><span></span><span></span></button>
       </div>
     </nav>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil" hidden>
-      <a href="#problemas">¿Te pasa esto?</a><a href="#solucion">Cómo te ayudamos</a><a href="#preguntas">Preguntas</a><a href="#contacto">Escríbenos</a><a class="mobile-nav-cta" href="agenda.html">Agendar una llamada</a>
+      <a href="#problemas">¿Te pasa esto?</a><a href="#solucion">Cómo te ayudamos</a><a href="#pruebalo">Pruébalo</a><a href="#preguntas">Preguntas</a><a href="#contacto">Escríbenos</a><a class="mobile-nav-cta" href="agenda.html" data-umami-event="agendar-llamada" data-umami-event-origen="menu-movil">Agendar una llamada</a>
     </nav>
   </header>
 
@@ -51,7 +68,7 @@
       </div>
       <div class="hero-inner container">
         <h1 id="hero-title">Deja de perder clientes <br class="wide-break">por falta de <em>seguimiento.</em></h1>
-        <a class="hero-cta glass" href="agenda.html">
+        <a class="hero-cta glass" href="agenda.html" data-umami-event="agendar-llamada" data-umami-event-origen="portada">
           <span class="hero-cta-text">Reserva 15 minutos para hablar de tu negocio</span>
           <span class="hero-cta-square" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
@@ -59,9 +76,9 @@
       </div>
       <div class="hero-foot container">
         <div class="round-links">
-          <a class="round glass" href="agenda.html" aria-label="Agendar una llamada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM4 11h16M8 4v5M16 4v5"/></svg></a>
-          <a class="round glass" href="mailto:horus-ia@danielo.click" aria-label="Escribir un email a HORUS IA"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg></a>
-          <a class="round glass" href="tel:+34661679002" aria-label="Llamar a HORUS IA"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg></a>
+          <a class="round glass" href="agenda.html" aria-label="Agendar una llamada" data-umami-event="agendar-llamada" data-umami-event-origen="portada-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM4 11h16M8 4v5M16 4v5"/></svg></a>
+          <a class="round glass" href="mailto:horus-ia@danielo.click" aria-label="Escribir un email a HORUS IA" data-umami-event="email" data-umami-event-origen="portada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg></a>
+          <a class="round glass" href="tel:+34661679002" aria-label="Llamar a HORUS IA" data-umami-event="telefono" data-umami-event-origen="portada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg></a>
         </div>
         <button type="button" class="round glass video-toggle" id="video-toggle" aria-label="Reproducir el vídeo de fondo" data-playing="false">
           <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
@@ -157,6 +174,45 @@
       </ol>
     </section>
 
+    <section class="demo container" id="pruebalo" aria-labelledby="demo-title">
+      <div class="demo-panel">
+        <div class="demo-copy">
+          <p class="label">Pruébalo ahora</p>
+          <h2 id="demo-title" class="display display-small">No te lo contamos. <em>Pruébalo.</em></h2>
+          <p>Nuestro asistente te responde aquí mismo, al momento y a cualquier hora. Escríbele como lo haría uno de tus clientes: pregúntale un precio, si encaja con tu negocio o cómo funcionaría.</p>
+          <p class="demo-note">Así de rápido atendería a los tuyos.</p>
+        </div>
+        <div class="demo-try glass">
+          <p class="label">Empieza con una pregunta</p>
+          <ul class="demo-prompts">
+            <li><a class="demo-prompt" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-open data-chat-text="¿Cuánto cuesta?" data-umami-event="abrir-chat" data-umami-event-origen="sugerencia">«¿Cuánto cuesta?»</a></li>
+            <li><a class="demo-prompt" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-open data-chat-text="Tengo una peluquería, ¿esto me sirve?" data-umami-event="abrir-chat" data-umami-event-origen="sugerencia">«Tengo una peluquería, ¿me sirve?»</a></li>
+            <li><a class="demo-prompt" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-open data-chat-text="¿Cómo funcionaría con mis clientes?" data-umami-event="abrir-chat" data-umami-event-origen="sugerencia">«¿Cómo funcionaría con mis clientes?»</a></li>
+          </ul>
+          <a class="button-solid demo-open" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-open data-umami-event="abrir-chat" data-umami-event-origen="boton">Abrir el chat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <p class="demo-alt">También te responde en Instagram: <a href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-umami-event="instagram" data-umami-event-origen="demo">@horus__ia</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients container" id="clientes" aria-labelledby="clients-title">
+      <div class="row-heading"><h2 id="clients-title">Negocios que ya trabajan <em>con nosotros.</em></h2><p>Casos reales en Guadalajara y Madrid</p></div>
+      <div class="client-grid">
+        <article class="client glass">
+          <p class="label">Administración de fincas · Azuqueca de Henares</p>
+          <h3>Administradores de Fincas Hurtado</h3>
+          <p>Sus vecinos consultan por WhatsApp, cualquier día y a cualquier hora, el estado de sus cuotas y recibos, las actas de las juntas o cómo va una incidencia. Solo responde a vecinos verificados.</p>
+          <p class="client-tag">Asistente de WhatsApp para sus comunidades</p>
+        </article>
+        <article class="client glass">
+          <p class="label">Administración de fincas y gestoría · Alcalá de Henares</p>
+          <h3>SM Alcalá</h3>
+          <p>Su asistente atiende a propietarios y presidentes de comunidad: recoge los datos de cada incidencia, orienta los trámites y detecta a las comunidades que buscan administrador para que el despacho les dé seguimiento.</p>
+          <p class="client-tag">Asistente virtual para vecinos y nuevas comunidades</p>
+        </article>
+      </div>
+    </section>
+
     <section class="faq container" id="preguntas" aria-labelledby="faq-title">
       <h2 id="faq-title" class="display display-small">Es normal tener <em>preguntas.</em></h2>
       <div class="faq-list">
@@ -170,13 +226,14 @@
 
     <section class="booking container" id="agenda" aria-labelledby="booking-title">
       <div class="booking-panel">
-        <img class="booking-bg" src="assets/horus-eye-poster.jpg" width="1280" height="720" alt="" loading="lazy">
+        <img class="booking-photo" src="assets/daniel-gomez.jpg" width="640" height="800" alt="Daniel Gómez, fundador de HORUS IA" loading="lazy">
         <div class="booking-card glass">
           <p class="label">15 minutos por videollamada</p>
           <h2 id="booking-title">Reservemos 15 minutos para hablar de <em>tu negocio.</em></h2>
           <p>Elige el día y la hora que te vengan bien. Vemos dónde se queda a medias el seguimiento y por dónde empezar a mejorarlo.</p>
           <ul class="checks"><li>Revisamos qué está pasando con tus consultas.</li><li>Identificamos una oportunidad de mejora.</li><li>Te explicamos cómo podríamos ayudarte.</li></ul>
-          <a class="button-solid" href="agenda.html">Elegir día y hora <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="button-solid" href="agenda.html" data-umami-event="agendar-llamada" data-umami-event-origen="seccion-agenda">Elegir día y hora <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <p class="booking-host">Hablarás con <strong>Daniel Gómez</strong>, fundador de HORUS IA.</p>
           <p class="booking-small">Sin compromiso. Recibirás la confirmación por email. ¿Prefieres escribir primero? <a href="#contacto">Cuéntanos tu caso.</a></p>
         </div>
       </div>
@@ -187,8 +244,8 @@
         <h2 id="contact-title" class="display display-small">La próxima oportunidad merece <em>un seguimiento.</em></h2>
         <p>Cuéntanos qué se está quedando a medias. Vemos contigo dónde se pierden los clientes y qué podemos hacer para que avancen.</p>
         <ul class="contact-details">
-          <li><span>Email</span><a href="mailto:horus-ia@danielo.click">horus-ia@danielo.click</a></li>
-          <li><span>Teléfono</span><a href="tel:+34661679002">+34 661 679 002</a></li>
+          <li><span>Email</span><a href="mailto:horus-ia@danielo.click" data-umami-event="email" data-umami-event-origen="contacto">horus-ia@danielo.click</a></li>
+          <li><span>Teléfono</span><a href="tel:+34661679002" data-umami-event="telefono" data-umami-event-origen="contacto">+34 661 679 002</a></li>
           <li><span>Dónde</span>Desde Guadalajara, para negocios de toda España</li>
         </ul>
       </div>
@@ -197,6 +254,7 @@
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://danielo.click/gracias.html">
+        <div class="form-trap" aria-hidden="true"><label for="website">No rellenes este campo</label><input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
         <h3>¿Dónde necesitas mejorar?</h3>
         <div class="form-row">
           <div class="form-field"><label for="name">Tu nombre</label><input id="name" name="nombre" autocomplete="given-name" placeholder="¿Cómo te llamas?" required></div>
@@ -205,7 +263,7 @@
         <div class="form-field"><label for="email">Email de contacto</label><input id="email" name="email" type="email" autocomplete="email" placeholder="tu@negocio.com" required></div>
         <div class="form-field"><label for="problem">¿Qué te está pasando?</label><select id="problem" name="problema" required><option value="" selected disabled>Elige el problema que más te preocupa</option><option>Las consultas se quedan sin responder</option><option>Los presupuestos no avanzan</option><option>Los clientes no acuden a sus citas</option><option>Mis clientes no vuelven</option><option>Me cuesta organizar el seguimiento</option><option>Quiero contarte otra situación</option></select></div>
         <div class="form-field"><label for="message">Cuéntanos un poco más <span>(opcional)</span></label><textarea id="message" name="mensaje" rows="3" placeholder="Por ejemplo: enviamos presupuestos, pero no llegamos a retomarlos…"></textarea></div>
-        <button class="button-solid form-button" id="contact-submit" type="submit">Quiero hablar de mi negocio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <button class="button-solid form-button" id="contact-submit" type="submit" data-umami-event="enviar-formulario">Quiero hablar de mi negocio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         <p class="form-note">Consulta cómo tratamos tus datos en la <a href="politica-privacidad.html">política de privacidad</a>.</p>
       </form>
     </section>
@@ -217,14 +275,16 @@
         <a class="brand" href="#inicio" aria-label="HORUS IA, volver al inicio"><img src="assets/horus-eye-logo-192.png" width="44" height="35" alt=""><span>HORUS <b>IA</b></span></a>
         <p>Que cada conversación tenga un <em>siguiente paso.</em></p>
         <div class="round-links">
-          <a class="round glass" href="agenda.html" aria-label="Agendar una llamada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM4 11h16M8 4v5M16 4v5"/></svg></a>
-          <a class="round glass" href="mailto:horus-ia@danielo.click" aria-label="Escribir un email a HORUS IA"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg></a>
-          <a class="round glass" href="tel:+34661679002" aria-label="Llamar a HORUS IA"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg></a>
+          <a class="round glass" href="agenda.html" aria-label="Agendar una llamada" data-umami-event="agendar-llamada" data-umami-event-origen="pie-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM4 11h16M8 4v5M16 4v5"/></svg></a>
+          <a class="round glass" href="mailto:horus-ia@danielo.click" aria-label="Escribir un email a HORUS IA" data-umami-event="email" data-umami-event-origen="pie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg></a>
+          <a class="round glass" href="tel:+34661679002" aria-label="Llamar a HORUS IA" data-umami-event="telefono" data-umami-event-origen="pie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg></a>
+          <a class="round glass" href="https://www.instagram.com/horus__ia/" target="_blank" rel="noopener" aria-label="HORUS IA en Instagram (se abre en una pestaña nueva)" data-umami-event="instagram" data-umami-event-origen="pie"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><path d="M17 7h.01" stroke-width="2.4"/></svg></a>
         </div>
       </div>
       <nav class="footer-columns" aria-label="Pie de página">
-        <div><p class="label">La web</p><a href="#problemas">¿Te pasa esto?</a><a href="#solucion">Cómo te ayudamos</a><a href="#proceso">Proceso</a><a href="#preguntas">Preguntas</a></div>
-        <div><p class="label">Hablemos</p><a href="agenda.html">Agendar una llamada</a><a href="#contacto">Escríbenos</a><a href="tel:+34661679002">+34 661 679 002</a></div>
+        <div><p class="label">La web</p><a href="#problemas">¿Te pasa esto?</a><a href="#solucion">Cómo te ayudamos</a><a href="#proceso">Proceso</a><a href="#pruebalo">Pruébalo</a><a href="#clientes">Clientes</a><a href="#preguntas">Preguntas</a></div>
+        <div><p class="label">Sectores</p><a href="administradores-de-fincas.html">Administradores de fincas</a><a href="hoteles-alojamientos.html">Hoteles y alojamientos</a><a href="empresas-seguridad.html">Empresas de seguridad</a><a href="negocios-locales.html">Negocios locales</a></div>
+        <div><p class="label">Hablemos</p><a href="agenda.html" data-umami-event="agendar-llamada" data-umami-event-origen="pie">Agendar una llamada</a><a href="#contacto">Escríbenos</a><a href="tel:+34661679002" data-umami-event="telefono" data-umami-event-origen="pie">+34 661 679 002</a></div>
         <div><p class="label">Legal</p><a href="aviso-legal.html">Aviso legal</a><a href="politica-privacidad.html">Privacidad</a><a href="politica-cookies.html">Cookies</a></div>
       </nav>
     </div>

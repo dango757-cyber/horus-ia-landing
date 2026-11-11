@@ -159,6 +159,41 @@ new IntersectionObserver(entries => {
   syncVideoPlayback();
 }, { threshold: 0.15 }).observe(brandVideo);
 
+// The CreatuAgente chat widget is the live demo. Its button has no public API, so "Abrir el chat" presses it and
+// can leave a first question typed in. Without the widget (blocked or not loaded) the links go to Instagram DMs.
+function chatWidgetButton() { return document.getElementById('ab-widget-btn'); }
+function openChat(text) {
+  const button = chatWidgetButton();
+  if (!button) return false;
+  const panel = document.getElementById('ab-widget-panel');
+  if (!panel || !panel.classList.contains('open')) button.click();
+  const input = document.getElementById('ab-widget-input');
+  if (input && text) {
+    input.value = text;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    window.setTimeout(() => input.focus(), 200);
+  }
+  return true;
+}
+document.querySelectorAll('[data-chat-open]').forEach(link => {
+  link.addEventListener('click', event => {
+    if (openChat(link.dataset.chatText)) event.preventDefault();
+  });
+});
+// When the demo section first comes into view, the floating chat button pulses to show where the chat lives.
+const demoSection = document.querySelector('#pruebalo');
+if (demoSection) {
+  const demoObserver = new IntersectionObserver(entries => {
+    if (!entries[0].isIntersecting) return;
+    const button = chatWidgetButton();
+    if (!button) return;
+    button.classList.add('chat-nudge');
+    button.addEventListener('animationend', () => button.classList.remove('chat-nudge'), { once: true });
+    demoObserver.disconnect();
+  }, { threshold: 0.5 });
+  demoObserver.observe(demoSection);
+}
+
 // The example conversation plays once, in order, when it scrolls into view.
 const thread = document.querySelector('#thread');
 const threadObserver = new IntersectionObserver(entries => {

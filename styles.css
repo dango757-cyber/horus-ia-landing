@@ -396,7 +396,7 @@ h2 em { color: var(--blue-soft); font-size: 1.1em; line-height: 1; }
 }
 
 /* Shared section rhythm */
-.pains, .method, .process, .faq, .booking, .contact { padding-top: clamp(96px, 12vw, 176px); }
+.pains, .method, .process, .demo, .clients, .faq, .booking, .contact { padding-top: clamp(96px, 12vw, 176px); }
 .row-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 48px; }
 .row-heading h2 { max-width: 800px; font-size: clamp(30px, 3.5vw, 48px); line-height: 1.12; letter-spacing: -.03em; }
 .row-heading > p { flex-shrink: 0; padding-bottom: 6px; color: var(--faint); font-size: 14px; }
@@ -509,6 +509,52 @@ h2 em { color: var(--blue-soft); font-size: 1.1em; line-height: 1; }
 .faq-list details[open] summary span::after { transform: rotate(0); }
 .faq-list details p { max-width: 62ch; padding-bottom: 26px; color: var(--muted); }
 
+/* Live demo: the chat widget is the product sample, so visitors can try it as a customer would. */
+.demo-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 80px);
+  padding: clamp(32px, 5vw, 64px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: radial-gradient(60% 80% at 100% 100%, rgba(59, 143, 232, .16), transparent 70%), linear-gradient(160deg, #081627, #040b15 70%);
+}
+.demo-copy .display { margin-top: 14px; }
+.demo-copy > p:not(.label) { max-width: 480px; margin-top: 20px; color: var(--muted); font-size: 17px; }
+.demo-copy > .demo-note { color: var(--ice); font-family: var(--font-display); font-size: 23px; font-style: italic; line-height: 1.25; }
+.demo-try { padding: 28px; border-radius: 22px; }
+.demo-prompts { display: grid; justify-items: start; gap: 10px; margin-top: 16px; }
+.demo-prompt {
+  display: block;
+  padding: 12px 18px;
+  border: 1px solid rgba(150, 190, 240, .22);
+  border-radius: 18px 18px 18px 4px;
+  background: rgba(6, 16, 29, .6);
+  color: var(--ice);
+  font-size: 15px;
+  line-height: 1.4;
+  transition: border-color .2s, background-color .2s;
+}
+.demo-prompt:hover { border-color: var(--blue-bright); background-color: rgba(59, 143, 232, .14); }
+.demo-open { width: 100%; margin-top: 24px; }
+.demo-alt { margin-top: 14px; color: var(--muted); font-size: 13.5px; text-align: center; }
+.demo-alt a { color: var(--ice); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+@media (prefers-reduced-motion: no-preference) {
+  #ab-widget-btn.chat-nudge { animation: chat-nudge 1.4s var(--ease) 3; }
+}
+@keyframes chat-nudge {
+  0% { box-shadow: 0 0 0 0 rgba(91, 168, 255, .65), 0 4px 20px rgba(0, 0, 0, .25); }
+  100% { box-shadow: 0 0 0 22px rgba(91, 168, 255, 0), 0 4px 20px rgba(0, 0, 0, .25); }
+}
+
+/* Clients */
+.client-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.client { display: flex; flex-direction: column; padding: 32px; border-radius: 22px; }
+.client h3 { margin-top: 12px; font-size: 26px; line-height: 1.2; letter-spacing: -.02em; }
+.client h3 + p { margin-top: 14px; color: var(--muted); font-size: 15.5px; }
+.client-tag { margin-top: auto; padding-top: 22px; color: var(--ice); font-family: var(--font-display); font-size: 20px; font-style: italic; line-height: 1.25; }
+
 /* Booking */
 .booking-panel {
   position: relative;
@@ -522,17 +568,21 @@ h2 em { color: var(--blue-soft); font-size: 1.1em; line-height: 1; }
   border-radius: 28px;
   background: linear-gradient(160deg, #081627, #040b15 70%);
 }
-.booking-bg {
+/* The founder's portrait fades into the panel so the card reads as a conversation with a person. */
+.booking-photo {
   position: absolute;
   z-index: -2;
-  top: 50%;
-  right: -9%;
-  width: 80%;
-  height: auto;
+  top: 0;
+  right: 0;
+  width: 46%;
+  height: 100%;
   max-width: none;
-  transform: translateY(-50%);
-  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 40%, transparent 100%);
-  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 40%, transparent 100%);
+  object-fit: cover;
+  object-position: 50% 15%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 38%), linear-gradient(#000 70%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 38%), linear-gradient(#000 70%, transparent);
+  mask-composite: intersect;
 }
 .booking-panel::after {
   content: "";
@@ -553,7 +603,9 @@ h2 em { color: var(--blue-soft); font-size: 1.1em; line-height: 1; }
 .booking-card h2 + p { margin-top: 16px; color: var(--muted); }
 .booking-card .checks { margin-top: 22px; }
 .booking-card .button-solid { margin-top: 30px; }
-.booking-small { margin-top: 20px; color: var(--muted); font-size: 13.5px; }
+.booking-host { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14.5px; }
+.booking-host strong { color: var(--text); font-weight: 600; }
+.booking-small { margin-top: 14px; color: var(--muted); font-size: 13.5px; }
 .booking-small a { color: var(--ice); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 /* Contact */
@@ -588,6 +640,8 @@ h2 em { color: var(--blue-soft); font-size: 1.1em; line-height: 1; }
 .form-field input:focus-visible, .form-field select:focus-visible, .form-field textarea:focus-visible { outline-offset: 2px; border-color: var(--blue-bright); }
 .form-button { width: 100%; margin-top: 26px; }
 .form-note { margin-top: 14px; color: var(--muted); font-size: 12.5px; text-align: center; }
+/* Honeypot for FormSubmit: people never see it, bots that fill it are discarded. */
+.form-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .form-note a { color: var(--ice); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
 /* Footer */
@@ -637,12 +691,13 @@ h2 em { color: var(--blue-soft); font-size: 1.1em; line-height: 1; }
   .feature-panel { gap: 32px; padding: 32px; }
   .feature-foot { flex-direction: column; align-items: stretch; }
   .feature-caption { max-width: none; }
-  .method-grid, .faq, .contact { grid-template-columns: 1fr; gap: 40px; }
+  .method-grid, .faq, .contact, .demo-panel { grid-template-columns: 1fr; gap: 40px; }
+  .client-grid { grid-template-columns: 1fr; gap: 14px; }
   .steps { grid-template-columns: 1fr; border-top: 0; }
   .steps li, .steps li + li { padding: 32px 0; border-left: 0; border-top: 1px solid var(--line); }
   .steps li:last-child { padding-bottom: 0; }
   .booking-panel { flex-direction: column; align-items: stretch; min-height: 0; padding: 0; }
-  .booking-bg { position: static; width: 100%; transform: none; -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
+  .booking-photo { position: static; width: 100%; height: 440px; object-position: 50% 12%; -webkit-mask-image: linear-gradient(#000 62%, transparent); mask-image: linear-gradient(#000 62%, transparent); }
   .booking-panel::after { display: none; }
   .booking-card { max-width: none; margin: -72px 16px 16px; padding: 30px; }
 }
@@ -668,7 +723,11 @@ h2 em { color: var(--blue-soft); font-size: 1.1em; line-height: 1; }
   .tab { text-align: left; border-radius: 18px; }
   .journey { padding: 24px 20px; }
   .faq-list summary { font-size: 17px; padding-block: 20px; }
+  .booking-photo { height: 380px; }
   .booking-card { margin: -48px 10px 10px; padding: 24px 22px; }
+  .demo-panel { padding: 26px 20px; border-radius: 22px; }
+  .demo-try { padding: 22px 18px; }
+  .client { padding: 24px 22px; }
   .contact-form { padding: 24px 20px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .footer-columns { flex-wrap: wrap; gap: 32px 40px; }
