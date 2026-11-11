@@ -175,41 +175,52 @@
     </section>
 
     <section class="demo container" id="pruebalo" aria-labelledby="demo-title">
-      <div class="demo-panel">
-        <div class="demo-copy">
-          <p class="label">Pruébalo ahora</p>
-          <h2 id="demo-title" class="display display-small">No te lo contamos. <em>Pruébalo.</em></h2>
-          <p>Nuestro asistente te responde aquí mismo, al momento y a cualquier hora. Escríbele como lo haría uno de tus clientes: pregúntale un precio, si encaja con tu negocio o cómo funcionaría.</p>
-          <p class="demo-note">Así de rápido atendería a los tuyos.</p>
-        </div>
-        <div class="demo-try glass">
-          <p class="label">Empieza con una pregunta</p>
-          <ul class="demo-prompts">
-            <li><a class="demo-prompt" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-open data-chat-text="¿Cuánto cuesta?" data-umami-event="abrir-chat" data-umami-event-origen="sugerencia">«¿Cuánto cuesta?»</a></li>
-            <li><a class="demo-prompt" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-open data-chat-text="Tengo una peluquería, ¿esto me sirve?" data-umami-event="abrir-chat" data-umami-event-origen="sugerencia">«Tengo una peluquería, ¿me sirve?»</a></li>
-            <li><a class="demo-prompt" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-open data-chat-text="¿Cómo funcionaría con mis clientes?" data-umami-event="abrir-chat" data-umami-event-origen="sugerencia">«¿Cómo funcionaría con mis clientes?»</a></li>
-          </ul>
-          <a class="button-solid demo-open" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-open data-umami-event="abrir-chat" data-umami-event-origen="boton">Abrir el chat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <p class="demo-alt">También te responde en Instagram: <a href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-umami-event="instagram" data-umami-event-origen="demo">@horus__ia</a></p>
+      <div class="demo-head">
+        <p class="label">Pruébalo ahora</p>
+        <h2 id="demo-title" class="display">No te lo contamos. <em>Pruébalo.</em></h2>
+        <p class="demo-lead">Escríbele a nuestro asistente como lo haría uno de tus clientes y comprueba cómo atiende.</p>
+      </div>
+      <div class="demo-stage">
+        <p class="demo-tag demo-tag-1 glass" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg>Entiende lo que le preguntas</p>
+        <p class="demo-tag demo-tag-2 glass" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg>Recuerda toda la conversación</p>
+        <p class="demo-tag demo-tag-3 glass" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg>Propone una llamada a tiempo</p>
+        <div class="demo-chat glass" id="demo-chat">
+          <div class="demo-chat-head">
+            <span class="demo-avatar"><img src="assets/horus-eye-logo-192.png" width="30" height="24" alt=""></span>
+            <p><strong>Asistente de HORUS IA</strong><span class="demo-status">En línea</span></p>
+          </div>
+          <div class="demo-thread">
+            <span class="demo-typing" aria-hidden="true"><span></span><span></span><span></span></span>
+            <p class="demo-bubble">Hola, soy el asistente de HORUS IA. Pregúntame lo que quieras: precios, cómo funciona o si encaja con tu negocio.</p>
+          </div>
+          <div class="demo-suggestions" role="group" aria-label="Preguntas sugeridas">
+            <a class="demo-chip" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-text="¿Cuánto cuesta?" data-umami-event="abrir-chat" data-umami-event-origen="sugerencia">¿Cuánto cuesta?</a>
+            <a class="demo-chip" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-text="Tengo una peluquería, ¿esto me sirve?" data-umami-event="abrir-chat" data-umami-event-origen="sugerencia">Tengo una peluquería, ¿me sirve?</a>
+            <a class="demo-chip" href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-chat-text="¿Cómo funcionaría con mis clientes?" data-umami-event="abrir-chat" data-umami-event-origen="sugerencia">¿Cómo funcionaría con mis clientes?</a>
+          </div>
+          <form class="demo-composer" id="demo-composer" action="https://ig.me/m/horus__ia" target="_blank">
+            <label class="visually-hidden" for="demo-input">Escribe tu pregunta al asistente</label>
+            <input id="demo-input" type="text" placeholder="Escribe tu pregunta…" autocomplete="off" maxlength="300">
+            <button class="demo-send" type="submit" aria-label="Enviar la pregunta al asistente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+          </form>
         </div>
       </div>
+      <p class="demo-alt">Es el mismo asistente que responde en Instagram: <a href="https://ig.me/m/horus__ia" target="_blank" rel="noopener" data-umami-event="instagram" data-umami-event-origen="demo">@horus__ia</a></p>
     </section>
 
     <section class="clients container" id="clientes" aria-labelledby="clients-title">
-      <div class="row-heading"><h2 id="clients-title">Negocios que ya trabajan <em>con nosotros.</em></h2><p>Casos reales en Guadalajara y Madrid</p></div>
+      <div class="row-heading"><h2 id="clients-title">Lo que dicen quienes <em>ya lo usan.</em></h2><p>Casos reales en Guadalajara y Madrid</p></div>
       <div class="client-grid">
-        <article class="client glass">
-          <p class="label">Administración de fincas · Azuqueca de Henares</p>
-          <h3>Administradores de Fincas Hurtado</h3>
-          <p>Sus vecinos consultan por WhatsApp, cualquier día y a cualquier hora, el estado de sus cuotas y recibos, las actas de las juntas o cómo va una incidencia. Solo responde a vecinos verificados.</p>
-          <p class="client-tag">Asistente de WhatsApp para sus comunidades</p>
-        </article>
-        <article class="client glass">
-          <p class="label">Administración de fincas y gestoría · Alcalá de Henares</p>
-          <h3>SM Alcalá</h3>
-          <p>Su asistente atiende a propietarios y presidentes de comunidad: recoge los datos de cada incidencia, orienta los trámites y detecta a las comunidades que buscan administrador para que el despacho les dé seguimiento.</p>
-          <p class="client-tag">Asistente virtual para vecinos y nuevas comunidades</p>
-        </article>
+        <figure class="client glass">
+          <blockquote class="client-quote"><p>Ha sido un cambio radical: el despacho ha evolucionado.</p></blockquote>
+          <figcaption class="client-who"><strong>Administradores de Fincas Hurtado</strong><span>Administración de fincas · Azuqueca de Henares</span></figcaption>
+          <p class="client-desc">Sus vecinos consultan por WhatsApp, cualquier día y a cualquier hora, el estado de sus cuotas y recibos, las actas de las juntas o cómo va una incidencia. Solo responde a vecinos verificados.</p>
+        </figure>
+        <figure class="client glass">
+          <blockquote class="client-quote"><p>No salimos de nuestro asombro con el agente que tenemos ya en nuestro despacho. Es increíble.</p></blockquote>
+          <figcaption class="client-who"><strong>SM Alcalá</strong><span>Administración de fincas y gestoría · Alcalá de Henares</span></figcaption>
+          <p class="client-desc">Su asistente atiende a propietarios y presidentes de comunidad: recoge los datos de cada incidencia, orienta los trámites y detecta a las comunidades que buscan administrador para que el despacho les dé seguimiento.</p>
+        </figure>
       </div>
     </section>
 

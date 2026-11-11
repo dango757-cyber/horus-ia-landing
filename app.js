@@ -159,8 +159,10 @@ new IntersectionObserver(entries => {
   syncVideoPlayback();
 }, { threshold: 0.15 }).observe(brandVideo);
 
-// The CreatuAgente chat widget is the live demo. Its button has no public API, so "Abrir el chat" presses it and
-// can leave a first question typed in. Without the widget (blocked or not loaded) the links go to Instagram DMs.
+// The CreatuAgente chat widget is the live demo. It has no public API, so the page presses its button and, when
+// there is a question, types it into the widget and presses send. Without the widget (blocked or not loaded) the
+// suggestions and the form fall back to Instagram DMs, where the same assistant answers.
+const INSTAGRAM_DM = 'https://ig.me/m/horus__ia';
 function chatWidgetButton() { return document.getElementById('ab-widget-btn'); }
 function openChat(text) {
   const button = chatWidgetButton();
@@ -168,30 +170,51 @@ function openChat(text) {
   const panel = document.getElementById('ab-widget-panel');
   if (!panel || !panel.classList.contains('open')) button.click();
   const input = document.getElementById('ab-widget-input');
+  const send = document.getElementById('ab-widget-send');
   if (input && text) {
     input.value = text;
     input.dispatchEvent(new Event('input', { bubbles: true }));
-    window.setTimeout(() => input.focus(), 200);
+    window.setTimeout(() => {
+      if (send && !send.disabled) send.click();
+      else input.focus();
+    }, 250);
   }
   return true;
 }
-document.querySelectorAll('[data-chat-open]').forEach(link => {
+function track(name, data) { if (window.umami) window.umami.track(name, data); }
+
+document.querySelectorAll('[data-chat-text]').forEach(link => {
   link.addEventListener('click', event => {
     if (openChat(link.dataset.chatText)) event.preventDefault();
   });
 });
-// When the demo section first comes into view, the floating chat button pulses to show where the chat lives.
-const demoSection = document.querySelector('#pruebalo');
-if (demoSection) {
+const composer = document.querySelector('#demo-composer');
+if (composer) {
+  const field = composer.querySelector('input');
+  composer.addEventListener('submit', event => {
+    event.preventDefault();
+    track('abrir-chat', { origen: 'escrito' });
+    if (openChat(field.value.trim())) {
+      field.value = '';
+      return;
+    }
+    window.open(INSTAGRAM_DM, '_blank', 'noopener');
+  });
+}
+// The demo chat greets once when it comes into view, and the floating chat button pulses to show where it lives.
+const demoChat = document.querySelector('#demo-chat');
+if (demoChat) {
   const demoObserver = new IntersectionObserver(entries => {
     if (!entries[0].isIntersecting) return;
+    demoChat.classList.add('is-in');
     const button = chatWidgetButton();
-    if (!button) return;
-    button.classList.add('chat-nudge');
-    button.addEventListener('animationend', () => button.classList.remove('chat-nudge'), { once: true });
+    if (button) {
+      button.classList.add('chat-nudge');
+      button.addEventListener('animationend', () => button.classList.remove('chat-nudge'), { once: true });
+    }
     demoObserver.disconnect();
-  }, { threshold: 0.5 });
-  demoObserver.observe(demoSection);
+  }, { threshold: 0.4 });
+  demoObserver.observe(demoChat);
 }
 
 // The example conversation plays once, in order, when it scrolls into view.
